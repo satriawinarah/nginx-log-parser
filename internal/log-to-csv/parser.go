@@ -198,9 +198,9 @@ func ProcessLogDirectory(inputDir, outputDir string) error {
 
 	var logFiles []string
 	for _, entry := range entries {
-		if !entry.IsDir() && strings.HasSuffix(strings.ToLower(entry.Name()), ".log") {
-			logFiles = append(logFiles, entry.Name())
-		}
+		//if !entry.IsDir() && strings.HasSuffix(strings.ToLower(entry.Name()), ".log") {
+		logFiles = append(logFiles, entry.Name())
+		//}
 	}
 
 	if len(logFiles) == 0 {
